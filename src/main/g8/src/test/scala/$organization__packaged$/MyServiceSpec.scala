@@ -1,11 +1,11 @@
 package $organization$
 
 import org.scalatest.FlatSpec
-import org.scalatest.matchers.ShouldMatchers
+import org.scalatest.Matchers
 import spray.testkit.ScalatestRouteTest
 import spray.http.StatusCodes.MethodNotAllowed
 
-class MyServiceSpec extends FlatSpec with ScalatestRouteTest with ShouldMatchers with MyService {
+class MyServiceSpec extends FlatSpec with ScalatestRouteTest with Matchers with MyService {
   def actorRefFactory = system
   
   "MyService" should "return a greeting for GET requests to the root path" in {
