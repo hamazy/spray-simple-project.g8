@@ -1,9 +1,7 @@
 package $organization$
 
 import akka.actor.Actor
-import spray.routing._
-import spray.http._
-import MediaTypes._
+import spray.routing.HttpService
 
 // we don't implement our route structure directly in the service actor because
 // we want to be able to test it independently, without having to spin up an actor
@@ -22,6 +20,8 @@ class MyServiceActor extends Actor with MyService {
 
 // this trait defines our service behavior independently from the service actor
 trait MyService extends HttpService {
+
+  import spray.http.MediaTypes.`text/html`
 
   val myRoute =
     path("") {
