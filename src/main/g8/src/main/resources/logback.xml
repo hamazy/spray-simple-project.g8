@@ -7,7 +7,7 @@
     </encoder>
   </appender>
 
-  <logger name="$organization__packaged$" level="DEBUG" />
+  <logger name="$organization$" level="DEBUG" />
 
   <root level="INFO">
     <appender-ref ref="STDOUT" />
