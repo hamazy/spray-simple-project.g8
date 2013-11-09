@@ -11,12 +11,12 @@ object BuildSettings {
 }
 
 object Dependencies {
-  val sprayCan = "io.spray" % "spray-can" % "1.2-M8"
-  val sprayRouting = "io.spray" % "spray-routing" % "1.2-M8"
-  val sprayTest = "io.spray" % "spray-testkit" % "1.2-M8" % "test"
-  val akkaActor = "com.typesafe.akka" %% "akka-actor" % "2.2.0-RC1"
-  val akkaSlf4j = "com.typesafe.akka"   %%  "akka-slf4j" % "2.2.0-RC1"
-  val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % "2.2.0-RC1" % "test"
+  val sprayCan = "io.spray" % "spray-can" % "1.2-RC2"
+  val sprayRouting = "io.spray" % "spray-routing" % "1.2-RC2"
+  val sprayTest = "io.spray" % "spray-testkit" % "1.2-RC2" % "test"
+  val akkaActor = "com.typesafe.akka" %% "akka-actor" % "2.2.3"
+  val akkaSlf4j = "com.typesafe.akka"   %%  "akka-slf4j" % "2.2.3"
+  val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % "2.2.3" % "test"
   val scalaLogging = "com.typesafe" %% "scalalogging-slf4j" % "1.0.1"
   val logback = "ch.qos.logback" % "logback-classic" % "1.0.13"
   val scalatest = "org.scalatest" %% "scalatest" % "2.0.M8" % "test"
