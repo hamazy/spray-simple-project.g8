@@ -5,18 +5,21 @@ object BuildSettings {
   val buildSettings = Defaults.defaultSettings ++ Seq(
     organization := "$package$",
     version := "$version$",
-    scalaVersion := "2.10.2",
+    scalaVersion := "2.10.3",
     scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-encoding", "utf8")
   )
 }
 
 object Dependencies {
-  val sprayCan = "io.spray" % "spray-can" % "1.2-RC2"
-  val sprayRouting = "io.spray" % "spray-routing" % "1.2-RC2"
-  val sprayTest = "io.spray" % "spray-testkit" % "1.2-RC2" % "test"
-  val akkaActor = "com.typesafe.akka" %% "akka-actor" % "2.2.3"
-  val akkaSlf4j = "com.typesafe.akka"   %%  "akka-slf4j" % "2.2.3"
-  val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % "2.2.3" % "test"
+  val akkaVersion = "2.2.3"
+  val sprayVersion = "1.2.0"
+  val sprayCan = "io.spray" % "spray-can" % sprayVersion
+  val sprayRouting = "io.spray" % "spray-routing" % sprayVersion
+  val sprayJson = "io.spray" %% "spray-json" % "1.2.5"
+  val sprayTest = "io.spray" % "spray-testkit" % sprayVersion % "test"
+  val akkaActor = "com.typesafe.akka" %% "akka-actor" % akkaVersion
+  val akkaSlf4j = "com.typesafe.akka"   %%  "akka-slf4j" % akkaVersion
+  val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % akkaVersion % "test"
   val scalaLogging = "com.typesafe" %% "scalalogging-slf4j" % "1.0.1"
   val logback = "ch.qos.logback" % "logback-classic" % "1.0.13"
   val scalatest = "org.scalatest" %% "scalatest" % "2.0.M8" % "test"
@@ -26,6 +29,7 @@ object Dependencies {
   val commonDeps = Seq(
     sprayCan,
     sprayRouting,
+    sprayJson,
     sprayTest,
     akkaActor,
     akkaSlf4j,
