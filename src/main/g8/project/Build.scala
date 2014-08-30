@@ -6,7 +6,8 @@ object BuildSettings {
     organization := "$package$",
     version := "$version$",
     scalaVersion := "2.10.3",
-    scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-encoding", "utf8")
+    scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-encoding", "utf8"),
+    shellPrompt := { state => Project.extract(state).currentProject.id + " > " }
   )
 }
 
@@ -22,7 +23,7 @@ object Dependencies {
   val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % akkaVersion % "test"
   val scalaLogging = "com.typesafe" %% "scalalogging-slf4j" % "1.0.1"
   val logback = "ch.qos.logback" % "logback-classic" % "1.0.13"
-  val scalatest = "org.scalatest" %% "scalatest" % "2.0.M8" % "test"
+  val scalatest = "org.scalatest" %% "scalatest" % "2.1.5" % "test"
   val pegdown = "org.pegdown" % "pegdown" % "1.0.1" % "test"
   val mockito = "org.mockito" % "mockito-core" % "1.9.5" % "test"
 
